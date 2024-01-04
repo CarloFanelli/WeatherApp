@@ -1,5 +1,8 @@
 import { createApp } from 'vue'
-import './style.css'
+import './assets/scss/style.scss'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+import axios from 'axios'
+import { router } from './router'
+
+createApp(App).use(router).mount('#app')
