@@ -40,21 +40,10 @@ export default {
             state,
             location: '',
             //apiTomTomKey: '5QktgOJJEhidQMyyoeRgDCMFIquz9uqa',
-            apiGeocode: '6596f0e8a9bf5470888208zvc6c3989'
         };
     },
     methods: {
-        searchLocation() {
-            console.log(this.location);
-            axios({
-                method: 'get',
-                //url: `https://api.tomtom.com/search/2/geocode/${this.location}.json?storeResult=false&view=Unified&key=${this.apiTomTomKey}`,
-                url: `https://geocode.maps.co/search?q=${this.location}&api_key=${this.apiGeocode}`,
-            })
-                .then(response => {
-                    console.log(response);
-                });
-        },
+
         /*
         fetchMap() {
             const map = tt.map({
