@@ -1,11 +1,19 @@
 <template>
-    <h1>ciao</h1>
+    <h1>{{ this.location }}</h1>
 </template>
 
 <script>
 
 export default {
     name: 'AppResults',
+    data() {
+        return {
+            location: this.$route.query.location
+        }
+    },
+    mounted() {
+        console.log(this.location);
+    }
 }
 </script>
 

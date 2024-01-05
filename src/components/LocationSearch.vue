@@ -5,7 +5,7 @@
             <input v-model="location" type="text" name="location" id="location" class="form-control"
                 placeholder="insert location" />
         </div>
-        <router-link class="btn btn-primary" :to="{ name: 'Results'/* , params: { slug: apartment.slug } */ }">
+        <router-link class="btn btn-primary" :to="{ name: 'Results', query: { location: this.location } }">
             <!--             @click.prevent="this.searchLocation()">
  --> Search!
         </router-link>
