@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import { state } from '../store';
 import { RouterLink } from 'vue-router';
 //import tt from '@tomtom-international/web-sdk-maps';

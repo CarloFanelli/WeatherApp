@@ -2,9 +2,9 @@
     <div class="container m-1">
         <div class="row">
             <div class="col-4">
-                <AppLocation :location="this.location"></AppLocation>
+                <AppLocation class="h-25" :location="this.location"></AppLocation>
 
-                <CurrentWeather></CurrentWeather>
+                <CurrentWeather class="h-75"></CurrentWeather>
             </div>
             <div class="col-8">
             </div>
