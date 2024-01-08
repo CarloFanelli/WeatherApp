@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <LocationSearch></LocationSearch>
-    </div>
+    <LocationSearch></LocationSearch>
 </template>
 
 <script>

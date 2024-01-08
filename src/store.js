@@ -26,7 +26,7 @@ export const state = reactive({
 
                 currentData.forEach((value, i) => {
                     const parameter = {
-                        data: value[0],
+                        data: value[0].replace(/_/g, ' '),
                         value: value[1],
                         unit: currentUnits[i]
                     }

@@ -1,12 +1,12 @@
 <template>
-    <div class="container">
+    <div class="container m-1">
         <div class="row">
             <div class="col-4">
+                <AppLocation :location="this.location"></AppLocation>
+
                 <CurrentWeather></CurrentWeather>
             </div>
             <div class="col-8">
-
-                <AppLocation :location="this.location"></AppLocation>
             </div>
         </div>
 

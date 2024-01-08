@@ -1,23 +1,16 @@
 <template>
-    <div>
-        <div class="mb-3">
-            <label for="location" class="form-label">Location</label>
-            <input v-model="location" type="text" name="location" id="location" class="form-control"
-                placeholder="insert location" />
-        </div>
-        <router-link class="btn btn-primary" :to="{ name: 'Results', query: { location: this.location } }">
-            <!--             @click.prevent="this.searchLocation()">
- --> Search!
-        </router-link>
-
-        <!-- 
-            
-            <div style="width: 100%; height: 100%;" id="map">
+    <div class="row vh-100">
+        <div class="col-8 m-auto">
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input v-model="location" type="text" name="location" id="location" class="form-control"
+                    placeholder="insert location" />
             </div>
-        -->
-
-
-
+            <router-link class="btn btn-primary" :to="{ name: 'Results', query: { location: this.location } }">
+                <!--             @click.prevent="this.searchLocation()">
+ --> Search!
+            </router-link>
+        </div>
 
     </div>
 </template>
