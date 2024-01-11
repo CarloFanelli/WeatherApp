@@ -7,6 +7,7 @@
                 <CurrentWeather class="h-75"></CurrentWeather>
             </div>
             <div class="col-8">
+                <WeatherData></WeatherData>
             </div>
         </div>
 
@@ -17,12 +18,14 @@
 import { state } from '../store';
 import AppLocation from '../components/AppLocation.vue'
 import CurrentWeather from '../components/CurrentWeather.vue';
+import WeatherData from '../components/WeatherData.vue';
 
 export default {
     name: 'AppResults',
     components: {
         AppLocation,
-        CurrentWeather
+        CurrentWeather,
+        WeatherData
     },
     data() {
         return {

@@ -8,6 +8,7 @@ export const state = reactive({
     long: null,
     mslm: null,
     currentWeather: [],
+    weatherDataHourly: [],
 
     /**
      * axios call and organize response
@@ -39,6 +40,14 @@ export const state = reactive({
 
                 //console.log(this.currentWeather);
                 /* END CURRENT WEATHER SECTION */
+
+                /* WeatherData SECTION */
+                //console.log(response.data.hourly);
+
+                this.weatherDataHourly = response.data.hourly;
+                console.log(this.weatherDataHourly);
+                /*END WeatherData SECTION */
+
 
 
             })
