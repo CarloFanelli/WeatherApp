@@ -9,6 +9,7 @@ export const state = reactive({
     mslm: null,
     currentWeather: [],
     weatherDataHourly: [],
+    hourlyLabels: [],
 
     /**
      * axios call and organize response
@@ -41,12 +42,22 @@ export const state = reactive({
                 //console.log(this.currentWeather);
                 /* END CURRENT WEATHER SECTION */
 
-                /* WeatherData SECTION */
+                /* HourlyWeatherData SECTION */
                 //console.log(response.data.hourly);
 
                 this.weatherDataHourly = response.data.hourly;
-                console.log(this.weatherDataHourly);
-                /*END WeatherData SECTION */
+                //console.log(this.weatherDataHourly);
+
+                //console.log(response.data.hourly.time);
+                this.hourlyLabels = response.data.hourly.time;
+                //console.log(this.hourlyLabels);
+
+                this.hourlyLabels.forEach(label => {
+                    console.log(label);
+                });
+                /*END HourlyWeatherData SECTION */
+
+
 
 
 
