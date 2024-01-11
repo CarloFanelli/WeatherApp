@@ -1,6 +1,6 @@
 <template>
     <div>
-        <AppChart></AppChart>
+        <AppChart title="ciao" :dataset="dailyDataset.apparent_temperature_max"></AppChart>
     </div>
 </template>
 
@@ -15,7 +15,8 @@ export default {
     data() {
         return {
             location: this.$route.query.location,
-            state
+            state,
+            dailyDataset: state.dailyDataset
         }
     },
 }

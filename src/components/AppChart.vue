@@ -1,7 +1,8 @@
 <template>
+    <h4 class="text-center">{{ title }}</h4>
     <Bar :data="data" :options="options" />
 </template>
-  
+
 <script lang="ts">
 import {
     Chart as ChartJS,
@@ -25,13 +26,21 @@ export default {
     data() {
         return {
             data: {
-                labels: state.currentWeather,
+                labels: [state.dailyLabels],
                 datasets: [{ data: [40, 20, 12] }]
             },
             options: {
                 responsive: true
             }
         }
+    },
+    props: {
+        title: String,
+        dataset: Array
+    },
+    mounted() {
+        console.log(this.dataset);
+
     }
 }
 </script>

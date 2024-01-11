@@ -10,6 +10,8 @@ export const state = reactive({
     currentWeather: [],
     weatherDataHourly: [],
     hourlyLabels: [],
+    dailyLabels: [],
+    dailyDataset: [],
 
     /**
      * axios call and organize response
@@ -48,16 +50,42 @@ export const state = reactive({
                 this.weatherDataHourly = response.data.hourly;
                 //console.log(this.weatherDataHourly);
 
+                /*
                 //console.log(response.data.hourly.time);
                 this.hourlyLabels = response.data.hourly.time;
                 //console.log(this.hourlyLabels);
 
                 this.hourlyLabels.forEach(label => {
-                    console.log(label);
+                    label = label.split('T');
+                    let data = label[0].split('-');
+                    data = data[2] + '-' + data[1] + '-' + data[0];
+                    //console.log(data);
+                    label = label[1] + ' ' + data;
+                    //console.log(label);
                 });
+
+                console.log('??', this.hourlyLabels);
+                 */
                 /*END HourlyWeatherData SECTION */
 
+                /* DailyData SECTION */
+                //console.log(response.data.daily.time);
 
+                const days = response.data.daily.time;
+
+                days.forEach(label => {
+
+                    let data = label.split('-');
+                    //console.log(data);
+                    label = data[2] + '-' + data[1] + '-' + data[0];
+                    //console.log(label);
+                    this.dailyLabels.push(label)
+                })
+                //console.log(this.dailyLabels);
+                /* DailyData ENDSECTION */
+
+                this.dailyDataset = response.data.daily;
+                console.log(this.dailyDataset);
 
 
 
